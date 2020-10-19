@@ -9,6 +9,11 @@ void selection_sort(int *array, size_t size)
 {
 	unsigned long int i, j, index;
 
+	if (!array)
+	{
+		return;
+	}
+
 	for (i = 0 ; i < size - 1 ; i++)
 	{
 		index = i;
