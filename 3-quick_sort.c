@@ -39,6 +39,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
  * @array: array to be split
  * @low: low side of array
  * @high: high side of array
+ * @size: size fo array
  * Return: element that is a pivot
  */
 int partition(int *array, int low, int high, size_t size)
