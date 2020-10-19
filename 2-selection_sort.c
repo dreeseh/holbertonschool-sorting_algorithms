@@ -7,7 +7,8 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned long int i, j, index;
+	unsigned long int index;
+	size_t i, j;
 
 	if (!array)
 	{
