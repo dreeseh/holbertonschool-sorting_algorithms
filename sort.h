@@ -1,4 +1,4 @@
-#ifndef _SORT_HEADER__
+#ifndef _SORT_HEADER_
 #define _SORT_HEADER_
 
 #include <stdio.h>
