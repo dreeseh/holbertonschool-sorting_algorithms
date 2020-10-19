@@ -1,8 +1,4 @@
 #include "sort.h"
-
-int partition(int *array, int low, int high, size_t size);
-void quick_sort_recursive(int *array, int low, int high, size_t size);
-
 /**
  * quick_sort - sorts an array of integers in ascending order
  * @array: array to be sorted
