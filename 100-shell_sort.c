@@ -10,7 +10,7 @@ void shell_sort(int *array, size_t size)
 	int temp;
 	size_t gap, i, j;
 
-	if (array == NULL)
+	if (size < 2)
 		return;
 
 	for (gap = size / 2 ; gap > 0 ; gap /= 2)
