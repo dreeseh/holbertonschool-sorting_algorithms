@@ -14,17 +14,15 @@ void radix_sort(int *array, size_t size)
 	new_array = malloc(size * sizeof(int));/* initialize new_array */
 	if (new_array == NULL)
 		return;
-	
+	if (size == 0 || size == 1)/* check for cases 1 element & NULL */
+		return;
 	for (k = 1 ; k < size ; k++)/* find biggest number */
 	{
 		if (maximum < array[k])
 			maximum = array[k];
 	}
-	while (maximum > 0)/* count the digits of the max munber*/
-	{
-		digits++;
+	for (; maximum > 0 ; digits++)/* count the digits of the max munber*/
 		maximum /= 10;
-	}
 	for (i = 0 ; i < digits ; i++)/* arrange numbers */
 	{
 		for (j = 0 ; j < 10 ; j++)/* init count array*/
