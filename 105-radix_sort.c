@@ -8,12 +8,12 @@
  */
 void radix_sort(int *array, size_t size)
 {
-	int maximum = array[0], digits = 0, power = 1, *new_array, count[10], num, i;
+	int maximum, digits = 0, power = 1, *new_array, count[10], num, i;
 	unsigned int j, k;
 
-	if (size == 0 || size == 1 || array == NULL)
+	if (array == NULL || size < 2)
 		return;
-	new_array = malloc(size * sizeof(int));/* initialize new_array */
+	new_array = malloc(sizeof(int) * (int)size);/* initialize new_array */
 	if (new_array == NULL)
 		return;
 	for (k = 1 ; k < size ; k++)/* find biggest number */
