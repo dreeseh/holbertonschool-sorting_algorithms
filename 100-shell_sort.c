@@ -1,40 +1,75 @@
 #include "sort.h"
+
 /**
- * shell_sort - sorts an array using the Shell sort algorithm
+ * shell_sort - Kunth Sequence Shell-Sort algorithm
  * @array: array to be sorted
  * @size: size of array
  * Return: is void
  */
 void shell_sort(int *array, size_t size)
 {
-	int temp;
-	size_t gap, i, j;
+	size_t i = 0, j = 0, gap = 0, flag = 0;
+	int right = 0, left = 0;
 
-	if (size == 0 || size == 1)
+	if (array == NULL || size < 2)
 		return;
 
-	gap = 1;
-
-	while (gap < size)
+	gap = size;
+	while (gap > 1)
 	{
-		gap = gap * 3 - 1;
-	}
+		gap = kunth_seq(gap);
 
-	gap = (gap - 1) / 3;
-	while (gap > 0)
-	{
-		i = gap;
-		while (i < size)
+		for (i = 0; i < size - gap; i++)
 		{
-			temp = array[i];
-			for (j = i ; j >= gap && array[j - gap] > temp ; j -= gap)
+			for (j = i + gap; j >= gap; j--)
 			{
-				array[j] = array[j - gap];
+				left = array[j - gap];
+				right = array[j];
+				if (right < left)
+				{
+					swap_k(array, j, gap);
+					flag++;
+				}
+
+				if (j == 0)
+					break;
 			}
-			array[j] = temp;
-			i++;
 		}
+
 		print_array(array, size);
-		gap = (gap - 1) / 3;
+		flag = 0;
 	}
+}
+
+/**
+ * kunth_seq - the Kunth sequence
+ * @max: limiting the gap size
+ * Return: size_t gap size
+ */
+size_t kunth_seq(size_t max)
+{
+	size_t n = 0, gap = 0;
+
+	while (n < max)
+	{
+		gap = n;
+		n = n * 3 + 1;
+	}
+	return (gap);
+}
+
+/**
+ * swap_k - swaps ints
+ * @array: our array
+ * @j: int to swap
+ * @gap: int to swap
+ * Return: is void
+ */
+void swap_k(int *array, int j, int gap)
+{
+	int temp = 0;
+
+	temp = array[j - gap];
+	array[j - gap] = array[j];
+	array[j] = temp;
 }
