@@ -41,4 +41,11 @@ void shell_sort(int *array, size_t size);
 void swap_k(int *array, int j, int gap);
 size_t kunth_seq(size_t max);
 
+/** 106-bitonic_sort.c **/
+void bitonic_print(int *arr, int i, int limit);
+void sort_up(int *arr, int low, int high);
+void sort_down(int *arr, int low, int high);
+void recursive_bitonic(int *array, int min, int max, int bool, size_t size);
+void bitonic_sort(int *array, size_t size);
+
 #endif /** _SORT_HEADER_ **/
