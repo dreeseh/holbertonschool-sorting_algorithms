@@ -48,4 +48,7 @@ void sort_down(int *arr, int low, int high);
 void recursive_bitonic(int *array, int min, int max, int bool, size_t size);
 void bitonic_sort(int *array, size_t size);
 
+/** 107-quick_sort_hoare.c **/
+void quick_sort_hoare(int *array, size_t size);
+
 #endif /** _SORT_HEADER_ **/
