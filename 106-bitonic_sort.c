@@ -118,7 +118,7 @@ void sort_down(int *array, int min, int max)
 }
 
 /**
- * print_bitonic - prints the bitonic sequence
+ * bitonic_print - prints the bitonic sequence
  * @array: input array
  * @min: first index
  * @max: last index
