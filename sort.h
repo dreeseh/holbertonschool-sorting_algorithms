@@ -32,9 +32,13 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 
-void shell_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void heapify(int *array, int min, int max, size_t size);
 void radix_sort(int *array, size_t size);
+
+/** 100-shell_sort.c **/
+void shell_sort(int *array, size_t size);
+void swap_k(int *array, int j, int gap);
+size_t kunth_seq(size_t max);
 
 #endif /** _SORT_HEADER_ **/
