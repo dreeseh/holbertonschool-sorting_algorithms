@@ -2,21 +2,22 @@
 
 
 /**
- * 
+ * list_len - finds lenght of linked list
  *
- *
+ * @head: head of list
+ * Return: lenght
  */
-size_t list_len(const listint_t *h)
+size_t list_len(const listint_t *head)
 {
-	size_t cnt = 0;
+	size_t lenght = 0;
 
-	while (h != NULL)
+	while (head != NULL)
 	{
-		cnt++;
-		h = h->next;
+		lenght++;
+		head = head->next;
 	}
 
-	return (cnt);
+	return (lenght);
 }
 
 /**
@@ -46,7 +47,9 @@ void swap_nodes(listint_t **list, listint_t **p)
 }
 
 /**
- *  cocktail_sort_list - sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm
+ * cocktail_sort_list - sorts a doubly
+ * linked list of integers in ascending order using the Cocktail shaker sort *
+ * algorithm
  * @list: pointer to list
  */
 void cocktail_sort_list(listint_t **list)
