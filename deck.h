@@ -5,12 +5,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * enum kind_e - suits in the deck
+ * @SPADE: one of 4 suits
+ * @HEART: one of 4 suits
+ * @CLUB: one of 4 suits
+ * @DIAMOND: one of 4 suits
+ */
 typedef enum kind_e
 {
-        SPADE = 0,
-        HEART,
-        CLUB,
-        DIAMOND
+	SPADE = 0,
+	HEART,
+	CLUB,
+	DIAMOND
 } kind_t;
 
 /**
