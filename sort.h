@@ -41,6 +41,13 @@ void shell_sort(int *array, size_t size);
 void swap_k(int *array, int j, int gap);
 size_t kunth_seq(size_t max);
 
+/** 101-cocktail_sort_list.c **/
+void cocktail_sort_list(listint_t **list);
+void swap_nodes(listint_t **list, listint_t **p);
+
+/** 102-counting_sort.c **/
+void counting_sort(int *array, size_t size);
+
 /** 106-bitonic_sort.c **/
 void bitonic_print(int *arr, int i, int limit);
 void sort_up(int *arr, int low, int high);
